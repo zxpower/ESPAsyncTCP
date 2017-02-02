@@ -717,41 +717,41 @@ size_t AsyncClient::space(){
 
 const char * AsyncClient::errorToString(int8_t error){
   switch(error){
-    case 0: return String(F("OK"));
-    case -1: return String(F("Out of memory error"));
-    case -2: return String(F("Buffer error"));
-    case -3: return String(F("Timeout"));
-    case -4: return String(F("Routing problem"));
-    case -5: return String(F("Operation in progress"));
-    case -6: return String(F("Illegal value"));
-    case -7: return String(F("Operation would block"));
-    case -8: return String(F("Connection aborted"));
-    case -9: return String(F("Connection reset"));
-    case -10: return String(F("Connection closed"));
-    case -11: return String(F("Not connected"));
-    case -12: return String(F("Illegal argument"));
-    case -13: return String(F("Address in use"));
-    case -14: return String(F("Low-level netif error"));
-    case -15: return String(F("Already connected"));
-    case -55: return String(F("DNS failed"));
-    default: return String(F("UNKNOWN"));
+    case 0: return String(F("OK")).c_str();
+    case -1: return String(F("Out of memory error")).c_str();
+    case -2: return String(F("Buffer error")).c_str();
+    case -3: return String(F("Timeout")).c_str();
+    case -4: return String(F("Routing problem")).c_str();
+    case -5: return String(F("Operation in progress")).c_str();
+    case -6: return String(F("Illegal value")).c_str();
+    case -7: return String(F("Operation would block")).c_str();
+    case -8: return String(F("Connection aborted")).c_str();
+    case -9: return String(F("Connection reset")).c_str();
+    case -10: return String(F("Connection closed")).c_str();
+    case -11: return String(F("Not connected")).c_str();
+    case -12: return String(F("Illegal argument")).c_str();
+    case -13: return String(F("Address in use")).c_str();
+    case -14: return String(F("Low-level netif error")).c_str();
+    case -15: return String(F("Already connected")).c_str();
+    case -55: return String(F("DNS failed")).c_str();
+    default: return String(F("UNKNOWN")).c_str();
   }
 }
 
 const char * AsyncClient::stateToString(){
   switch(state()){
-    case 0: return String(F("Closed"));
-    case 1: return String(F("Listen"));
-    case 2: return String(F("SYN Sent"));
-    case 3: return String(F("SYN Received"));
-    case 4: return String(F("Established"));
-    case 5: return String(F("FIN Wait 1"));
-    case 6: return String(F("FIN Wait 2"));
-    case 7: return String(F("Close Wait"));
-    case 8: return String(F("Closing"));
-    case 9: return String(F("Last ACK"));
-    case 10: return String(F("Time Wait"));
-    default: return String(F("UNKNOWN"));
+    case 0: return String(F("Closed")).c_str();
+    case 1: return String(F("Listen")).c_str();
+    case 2: return String(F("SYN Sent")).c_str();
+    case 3: return String(F("SYN Received")).c_str();
+    case 4: return String(F("Established")).c_str();
+    case 5: return String(F("FIN Wait 1")).c_str();
+    case 6: return String(F("FIN Wait 2")).c_str();
+    case 7: return String(F("Close Wait")).c_str();
+    case 8: return String(F("Closing")).c_str();
+    case 9: return String(F("Last ACK")).c_str();
+    case 10: return String(F("Time Wait")).c_str();
+    default: return String(F("UNKNOWN")).c_str();
   }
 }
 
